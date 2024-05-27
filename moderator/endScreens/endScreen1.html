@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round1 Rules</title>
+    <link rel="stylesheet" href="../modstyle.css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+<style>
+    .mainbackground{
+  width: 100%;
+  background-image: url("../images/endScreen01.webp");
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+    .main_container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-div{
+        width: 60%;
+        height: auto;
+    }
+
+    .image-div img{
+        width: 100%;
+        height: auto;
+    }
+    .btnBackground{
+        position: absolute;
+        bottom: 15%;
+    }
+</style>
+
+</head>
+<body class="mainbackground" style="overflow: hidden;">
+    <audio id="clickSound" src="../sound/click.mp3"></audio>
+
+    <div class="banner">
+        <div class="gskalign">
+          <img class="gsklogo" src="../images/GSK Logo.png">
+        </div>
+        <div class="augmentinalign">
+          <img class="augmentinlogo" src="../images/Augmentin Logo.png">
+        </div>
+    </div>
+    <!-- FOR Sound👇 and Back -->
+    <div class="buttonsoundalign">
+        
+        <button onclick="back()" class="soundleft" >back</button>
+        
+        <button id="volumeup" class="soundright" onclick="backSound()" style="display: block;">  <i class="fas fa-volume-xmark"></i></button>
+        <button id="volumedown" class="soundright" onclick="backSound2()" style="display: none;">  <i class="fas fa-volume-up"></i></button>
+        
+    </div>
+    <!-- FOR Sound☝and Back  -->
+
+
+    <div class="forBtn">
+        <button id="result-btn" class="btnBackground">NEXT</button>
+    </div>
+
+    <script>
+    //  var resultbtn = document.getElementById('result-btn');
+    //  resultbtn.addEventListener('click', function() {
+    //     // Redirect to result1.html
+    //     window.location.href = "Game1.html";
+    // });
+  
+    function back() {
+        window.location.href='../final_result.html';
+    }
+    </script>
+    <script src="../../moderator/sound.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           // Get the audio element
+           var audio = document.getElementById('clickSound');
+       
+           // Get all elements with the class 'btnBackground'
+           var startButtons = document.querySelectorAll('.btnBackground');
+       
+           // Add click event listener to each button with the 'btnBackground' class
+           startButtons.forEach(function(startButton) {
+               startButton.addEventListener('click', function(event) {
+                   // Prevent the default action to avoid immediate navigation
+                   
+                   // Play the sound
+                   audio.play();
+                   
+                   event.preventDefault();
+                   // Delay the navigation to allow the sound to play
+                   setTimeout(function() {
+                       window.location.href = 'endScreen2.html';
+                   }, 500); // Adjust the delay time as needed
+               });
+           });
+       });
+       
+       </script>
+</body>
+</html>
