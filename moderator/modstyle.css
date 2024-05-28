@@ -152,6 +152,24 @@ li {
     background-size: 100% 100%;
 }
 
+
+.mainbackgroundMissMatch{
+  width: 100%;
+  background-image: url("../moderator/images/newMissMatch-Bg.webp");
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.mainbackgroundwordSearch{
+  width: 100%;
+  background-image: url("../moderator/images/Wordsearch.webp");
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
 .maincontainer{
   /* border: solid 2px rgb(248, 248, 248); */
   width: 99%;
